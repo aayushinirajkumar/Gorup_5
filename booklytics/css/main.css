@@ -1,0 +1,167 @@
+.bg-white-smoke {
+  background-color: #F7F5F3;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.custom-dropdown .dropdown-menu {
+  border: none;
+  box-shadow: none;
+  min-width: 100%;
+  padding: 0;
+  background-color: #F7F5F3;
+}
+
+.custom-dropdown .dropdown-menu .dropdown-item {
+  padding: 10px 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.custom-dropdown .dropdown-menu .dropdown-item:hover {
+  color: #067677;
+  background-color: #F7F5F3;
+}
+
+.nav-item .nav-link:hover {
+  color: #067677;
+}
+
+
+.hero {
+    height: 90vh;
+    background: url('../assets/images/banner.png') no-repeat center center/cover;
+    position: relative;
+  }
+  
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 2.0rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+    margin: 20px auto;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.section-content {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #727473;
+  padding: 10px 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links ul li a:hover {
+  color: #067677;
+}
+
+.footer-social a {
+  color: #727473;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-legal p {
+  font-size: 0.8rem;
+}
+
+.features p {
+  font-size: 14px;
+  padding: 0px 30px;
+}
+
+#manage-books {
+  background-color: #f8f9fa;  
+}
+
+.card-title { 
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-text small { 
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.card-custom {
+  border: 3px solid #067677 !important;
+}
+
+
+  
