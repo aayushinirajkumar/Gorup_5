@@ -43,35 +43,32 @@
             <h2 class="mb-4 text-center section-title">How the Update Function Will Work</h2>
 
             <p class="lead text-center">
-                The update functionality allows users to edit their previous reviews or update existing book information such as title, author, or genre. This keeps the content accurate and personalized.
+                The update functionality enables bookstore managers to modify existing book records in the system. This may include correcting book titles, author names, genre, or any other catalog details that need to be updated for inventory accuracy.
             </p>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-8">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Update Book Review</h5>
+                            <h5 class="card-title">Update Book Information</h5>
                             <form>
                                 <div class="mb-3 text-start">
                                     <label for="bookId" class="form-label">Book ID:</label>
-                                    <input type="text" class="form-control" id="bookId" placeholder="Enter Book ID" disabled>
+                                    <input type="text" class="form-control" id="bookId" placeholder="Enter Book ID to update" disabled>
                                 </div>
                                 <div class="mb-3 text-start">
-                                    <label for="rating" class="form-label">New Rating:</label>
-                                    <select class="form-select" id="rating" disabled>
-                                        <option selected>Choose rating</option>
-                                        <option value="1">1 - Poor</option>
-                                        <option value="2">2 - Fair</option>
-                                        <option value="3">3 - Good</option>
-                                        <option value="4">4 - Very Good</option>
-                                        <option value="5">5 - Excellent</option>
-                                    </select>
+                                    <label for="title" class="form-label">New Title:</label>
+                                    <input type="text" class="form-control" id="title" placeholder="Enter updated book title" disabled>
                                 </div>
                                 <div class="mb-3 text-start">
-                                    <label for="review" class="form-label">Updated Review:</label>
-                                    <textarea class="form-control" id="review" rows="3" placeholder="Write your updated review here..." disabled></textarea>
+                                    <label for="author" class="form-label">New Author:</label>
+                                    <input type="text" class="form-control" id="author" placeholder="Enter updated author name" disabled>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" disabled>Update Review</button>
+                                <div class="mb-3 text-start">
+                                    <label for="genre" class="form-label">New Genre:</label>
+                                    <input type="text" class="form-control" id="genre" placeholder="Enter updated genre" disabled>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100" disabled>Update Book</button>
                             </form>
                         </div>
                     </div>
@@ -79,7 +76,11 @@
             </div>
 
             <div class="mt-4 text-center">
-                <p class="text-muted"><em>This form is for demonstration only. In the final application, this feature will connect to the backend API and update the book review in the database based on the Book ID.</em></p>
+                <p class="text-muted">
+                    <em>
+                        This is a static demo. In the final version, managers will be able to edit book details through this form and submit the changes to the database. Real-time validation and confirmation messages will be included for user confidence and accuracy.
+                    </em>
+                </p>
             </div>
         </div>
     </section>
