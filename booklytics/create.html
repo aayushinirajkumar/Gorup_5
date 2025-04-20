@@ -42,7 +42,39 @@
   <div class="container">
     <h2 class="mb-4 section-title">How create will work?</h2>
     <div class="section-content">
-      <p>Explain how used can add reviews.</p>
+        <p>The "Create" operation allows users to add new books and reviews to the system. Below is a sample form that illustrates how a user might input book details in a real web application. This is a mockup only — no data is stored.</p>
+
+        <form class="mt-4 text-start mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="bookTitle" class="form-label">Book Title</label>
+                <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title">
+            </div>
+            <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" placeholder="Enter author's name">
+            </div>
+            <div class="mb-3">
+                <label for="bookGenre" class="form-label">Genre</label>
+                <select class="form-select" id="bookGenre">
+                    <option selected>Select genre</option>
+                    <option>Fiction</option>
+                    <option>Self-help</option>
+                    <option>Drama</option>
+                    <option>Thriller</option>
+                    <option>Fantasy</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="bookRating" class="form-label">Rating</label>
+                <input type="number" class="form-control" id="bookRating" min="1" max="5" placeholder="1 to 5">
+            </div>
+            <div class="mb-3">
+                <label for="bookReview" class="form-label">Review</label>
+                <textarea class="form-control" id="bookReview" rows="4" placeholder="Write your review"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+
     </div>
   </div>
 </section>
