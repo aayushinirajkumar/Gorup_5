@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BookLytics</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Book - BookLytics</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white-smoke sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
-    <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </div>
-    <div id="navbarNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="books.html">Book Library</a></li>
-        <li class="nav-item dropdown custom-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Books</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="create.html">Create</a></li>
-            <li><a class="dropdown-item" href="read.html">Read</a></li>
-            <li><a class="dropdown-item" href="update.html">Update</a></li>
-            <li><a class="dropdown-item" href="delete.html">Delete</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="trends.html">Explore Trends</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white-smoke sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="books.html">Book Library</a></li>
+                    <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Books</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html">Create</a></li>
+                            <li><a class="dropdown-item" href="read.html">Read</a></li>
+                            <li><a class="dropdown-item" href="update.html">Update</a></li>
+                            <li><a class="dropdown-item active" href="delete.html">Delete</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="trends.html">Explore Trends</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!-- Section -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <h2 class="mb-4 section-title">How delete will work?</h2>
-    <div class="section-content">
-      <p>Explain how you can delete a book.</p>
-    </div>
-  </div>
-</section>
+    <!-- Delete Functionality Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center section-title">How the Delete Function Will Work</h2>
 
-<!-- Footer -->
-<footer class="py-3 bg-white-smoke">
-  <div class="container">
-    <div class="content-wrapper">
-      <div class="footer-logo">
-        <a href="index.html"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-        <li><a href="books.html">Book Library</a></li>
-        <li><a href="trends.html">Explore Trends</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </div>
-</div>
-<div class="footer-legal text-center">
-  <p>&copy; 2025 Booklytics. All rights reserved.</p>
-</div>
-</footer>
+            <p class="lead text-center">
+                The delete functionality allows administrators to remove books from the BookLytics library. This ensures that outdated, duplicate, or incorrect entries can be cleaned from the system.
+            </p>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete Book by ID</h5>
+                            <form>
+                                <div class="mb-3 text-start">
+                                    <label for="bookId" class="form-label">Book ID:</label>
+                                    <input type="text" class="form-control" id="bookId" placeholder="Enter Book ID to delete" disabled>
+                                </div>
+                                <button type="submit" class="btn btn-danger w-100" disabled>Delete Book</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 text-center">
+                <p class="text-muted"><em>This is a static demo. In the final version, this button will connect to a backend API and delete the book record from the database using the entered ID.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-white-smoke">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Book Library</a></li>
+                        <li><a href="trends.html">Explore Trends</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal text-center">
+            <p>&copy; 2025 BookLytics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
