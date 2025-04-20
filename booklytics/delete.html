@@ -43,14 +43,14 @@
             <h2 class="mb-4 text-center section-title">How the Delete Function Will Work</h2>
 
             <p class="lead text-center">
-                The delete functionality allows administrators to remove books from the BookLytics library. This ensures that outdated, duplicate, or incorrect entries can be cleaned from the system.
+                The delete functionality allows bookstore managers to remove outdated, duplicate, or incorrectly entered books from the BookLytics inventory system. This helps maintain a clean and up-to-date catalog for accurate tracking and reporting.
             </p>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Delete Book by ID</h5>
+                            <h5 class="card-title">Delete Book Entry</h5>
                             <form>
                                 <div class="mb-3 text-start">
                                     <label for="bookId" class="form-label">Book ID:</label>
@@ -64,7 +64,13 @@
             </div>
 
             <div class="mt-4 text-center">
-                <p class="text-muted"><em>This is a static demo. In the final version, this button will connect to a backend API and delete the book record from the database using the entered ID.</em></p>
+                <p class="text-muted">
+                    <em>
+                        This is a static mockup. In the final application, once a manager clicks the <strong>Delete</strong> button, a confirmation alert will appear asking: <br>
+                        <code>“Are you sure you want to permanently delete this book?”</code><br>
+                        Only after confirming will the system proceed to delete the record from the database.
+                    </em>
+                </p>
             </div>
         </div>
     </section>
