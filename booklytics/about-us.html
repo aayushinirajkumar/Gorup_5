@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<TITLE>My Second Web Page</TITLE>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About Us - Booklytics</title>
+	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-	<h1>Hello</h1>
-	<p>Bye!</p>
+	<!-- Navigation -->
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="trends.html">Data Visualization</a>
+		<a href="create.html">Create</a>
+		<a href="read.html">Read</a>
+		<a href="update.html">Update</a>
+		<a href="delete.html">Delete</a>
+		<a href="about-us.html">About Us</a>
+	</nav>
+
+	<!-- Main Content -->
+	<main>
+		<section id="team">
+			<h2>Meet Our Team</h2>
+
+			<div class="team-member">
+				<h3>Onisha Gangawal</h3>
+				<p><strong>Role:</strong> Project Lead & Homepage Developer</p>
+				<p><strong>Contributions:</strong> Led the team’s project organization and planning. Developed the homepage and implemented consistent navigation across all pages. Ensured responsive layout and design standards were followed.</p>
+			</div>
+
+			<div class="team-member">
+				<h3>Abinaya Ganesan</h3>
+				<p><strong>Role:</strong> CRUD Page Architect</p>
+				<p><strong>Contributions:</strong> Created four separate static HTML pages to explain Create, Read, Update, and Delete operations. Added mock forms and Bootstrap styling for each page. Enabled navigation from the homepage.</p>
+			</div>
+
+			<div class="team-member">
+				<h3>Prajay Khandelwal</h3>
+				<p><strong>Role:</strong> Data Visualization Developer</p>
+				<p><strong>Contributions:</strong> Integrated Chart.js to create three interactive visualizations using dummy book data. Designed the Data Visualization page with clear layout and tooltips for better insight.</p>
+			</div>
+
+			<div class="team-member">
+				<h3>Aayushi Nirajkumar Desai</h3>
+				<p><strong>Role:</strong> About Us Page Developer</p>
+				<p><strong>Contributions:</strong> Designed and structured the About Us page, added team member details, embedded GitHub repository and logical data model. Collaborated to maintain layout consistency across the site.</p>
+			</div>
+		</section>
+
+		<section id="data-model">
+			<h2>Logical Data Model</h2>
+			<p>The following diagram shows the relationship between our main entities in the Booklytics application:</p>
+			<ul>
+				<li>One <strong>User</strong> can write many <strong>Reviews</strong></li>
+				<li>One <strong>Book</strong> can have many <strong>Reviews</strong></li>
+			</ul>
+			<img src="assets/data-model.png" alt="Logical Data Model" style="max-width:100%; height:auto;">
+			<p><em>Created using <a href="https://dbdiagram.io" target="_blank">dbdiagram.io</a></em></p>
+		</section>
+
+		<section id="github">
+			<h2>Project Repository</h2>
+			<p>You can view our project and version history on <a href="https://github.com/aayushinirajkumar/Gorup_5" target="_blank">GitHub</a>.</p>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2025 Booklytics Team</p>
+	</footer>
 </body>
 </html>
