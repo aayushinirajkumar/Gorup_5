@@ -1,4 +1,4 @@
-// Bar Chart – Top 5 Rated Books
+// Bar Chart â€“ Top 5 Rated Books
 new Chart(document.getElementById("barChart"), {
     type: "bar",
     data: {
@@ -14,7 +14,7 @@ new Chart(document.getElementById("barChart"), {
     }
 });
 
-// Pie Chart – Genre Distribution
+// Pie Chart â€“ Genre Distribution
 new Chart(document.getElementById("pieChart"), {
     type: "pie",
     data: {
@@ -36,7 +36,7 @@ new Chart(document.getElementById("pieChart"), {
     }
 });
 
-// Line Chart – Monthly Review Counts
+// Line Chart â€“ Monthly Review Counts
 new Chart(document.getElementById("lineChart"), {
     type: "line",
     data: {
