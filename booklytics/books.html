@@ -1,227 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manage Books - Booklytics</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manage Books - Booklytics</title>
+<link rel="stylesheet" href="css/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="manage-books">
+<body id="manage-books">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white-smoke sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
-    <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </div>
-    <div id="navbarNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="books.html">Book Library</a></li>
-        <li class="nav-item dropdown custom-dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Books</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="create.html">Create</a></li>
-            <li><a class="dropdown-item" href="read.html">Read</a></li>
-            <li><a class="dropdown-item" href="update.html">Update</a></li>
-            <li><a class="dropdown-item" href="delete.html">Delete</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="trends.html">Explore Trends</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-      </ul>
-    </div>
+<div class="container">
+  <a class="navbar-brand" href="#"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
+  <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
   </div>
+  <div id="navbarNav" class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="books.html">Manage Books</a></li>
+      <li class="nav-item dropdown custom-dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">CRUD</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="create.html">Create</a></li>
+          <li><a class="dropdown-item" href="read.html">Read</a></li>
+          <li><a class="dropdown-item" href="update.html">Update</a></li>
+          <li><a class="dropdown-item" href="delete.html">Delete</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="trends.html">Explore Trends</a></li>
+      <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+    </ul>
+  </div>
+</div>
 </nav>
 
-  <div class="container">
-    <div class="py-5 d-flex justify-content-between align-items-center mb-4">
-      <h2>Manage Books</h2>
-      <button class="btn btn-primary" onclick="openAddModal()">+ Add New Book</button>
-    </div>
-
-    <div class="row" id="bookList">
-      <!-- Cards will be dynamically inserted here -->
-    </div>
+<div class="container">
+  <div class="py-5 d-flex justify-content-between align-items-center mb-4">
+    <h2>Manage Books</h2>
+    <button class="btn btn-primary" onclick="openAddModal()">+ Add New Book</button>
   </div>
 
-  <!-- Add/Edit Modal -->
-  <div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Add / Edit Book</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form id="bookForm">
-            <input type="hidden" id="bookId">
-            <div class="mb-3">
-              <label class="form-label">Title</label>
-              <input type="text" id="title" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Author</label>
-              <input type="text" id="author" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Genre</label>
-              <input type="text" id="genre" class="form-control">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Rating</label>
-              <input type="number" id="rating" class="form-control" min="1" max="5">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Review</label>
-              <textarea id="review" class="form-control"></textarea>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="liked">
-              <label class="form-check-label">Liked</label>
-            </div>
-            <button type="submit" class="btn btn-success">Save</button>
-          </form>
-        </div>
+  <div class="row" id="bookList">
+    <!-- Cards will be dynamically inserted here -->
+  </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add / Edit Book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bookForm">
+          <input type="hidden" id="bookId">
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" id="title" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" id="author" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Genre</label>
+            <input type="text" id="genre" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Rating</label>
+            <input type="number" id="rating" class="form-control" min="1" max="5">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Review</label>
+            <textarea id="review" class="form-control"></textarea>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="liked">
+            <label class="form-check-label">Liked</label>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </form>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="py-3 bg-white-smoke">
-  <div class="container">
-    <div class="content-wrapper">
-      <div class="footer-logo">
-        <a href="index.html"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-        <li><a href="books.html">Book Library</a></li>
-        <li><a href="trends.html">Explore Trends</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      </div>
+<div class="container">
+  <div class="content-wrapper">
+    <div class="footer-logo">
+      <a href="index.html"><img src="assets/logo-t.png" height="60" alt="BookLytics Logo"></a>
     </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Manage Books</a></li>
+      <li><a href="trends.html">Explore Trends</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <a href="#"><i class="fa-solid fa-phone"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
 </div>
 <div class="footer-legal text-center">
-  <p>&copy; 2025 Booklytics. All rights reserved.</p>
+<p>&copy; 2025 Booklytics. All rights reserved.</p>
 </div>
 </footer>
 
-  <script>
-    let books = [];
-
-    function generateDummyBooks() {
-      const titles = [
-        "The Alchemist", "Atomic Habits", "Rich Dad Poor Dad", "1984", "To Kill a Mockingbird",
-        "The Great Gatsby", "The Power of Now", "The Hobbit", "Becoming", "Sapiens",
-        "Deep Work", "Educated", "Think and Grow Rich", "Start With Why", "Can't Hurt Me",
-        "The Psychology of Money", "The Silent Patient", "Dune", "The Book Thief", "The Catcher in the Rye"
-      ];
-      titles.forEach((title, i) => {
-        books.push({
-          id: i + 1,
-          title,
-          author: `Author ${i + 1}`,
-          genre: ["Fiction", "Self-help", "Drama", "Thriller", "Fantasy"][i % 5],
-          rating: Math.ceil(Math.random() * 5),
-          review: "Sample review for " + title,
-          liked: Math.random() > 0.5
-        });
-      });
-    }
-
-    function renderBooks() {
-      const container = document.getElementById("bookList");
-      container.innerHTML = books.map(book => `
-        <div class="col-md-4 mb-4">
-          <div class="card card-custom">
-            <div class="card-body">
-              <h5 class="card-title">${book.title}</h5>
-              <p class="card-text">
-                <small><strong>Author:</strong> ${book.author}</small><br>
-                <small><strong>Genre:</strong> ${book.genre}</small><br>
-                <small><strong>Rating:</strong> ${'<i class="fas fa-star text-warning"></i>'.repeat(book.rating)}</small><br>
-                <small><strong>Review:</strong> ${book.review}</small><br>
-                <small><strong>Liked:</strong> ${book.liked ? '<i class="fas fa-heart text-danger"></i>' : '<i class="far fa-heart text-muted"></i>'}</small>
-              </p>
-              <button class="btn btn-sm btn-warning me-2" onclick='editBook(${book.id})'>Edit</button>
-              <button class="btn btn-sm btn-danger" onclick='deleteBook(${book.id})'>Delete</button>
-            </div>
-          </div>
-        </div>
-      `).join("");
-    }
-
-    function openAddModal() {
-      document.getElementById("bookForm").reset();
-      document.getElementById("bookId").value = "";
-      const modal = new bootstrap.Modal(document.getElementById('bookModal'));
-      modal.show();
-    }
-
-    function editBook(id) {
-      const book = books.find(b => b.id === id);
-      if (book) {
-        document.getElementById("bookId").value = book.id;
-        document.getElementById("title").value = book.title;
-        document.getElementById("author").value = book.author;
-        document.getElementById("genre").value = book.genre;
-        document.getElementById("rating").value = book.rating;
-        document.getElementById("review").value = book.review;
-        document.getElementById("liked").checked = book.liked;
-        const modal = new bootstrap.Modal(document.getElementById('bookModal'));
-        modal.show();
-      }
-    }
-
-    function deleteBook(id) {
-      if (confirm("Are you sure you want to delete this book?")) {
-        books = books.filter(b => b.id !== id);
-        renderBooks();
-      }
-    }
-
-    document.getElementById("bookForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const id = document.getElementById("bookId").value;
-      const bookData = {
-        id: id ? Number(id) : Date.now(),
-        title: document.getElementById("title").value,
-        author: document.getElementById("author").value,
-        genre: document.getElementById("genre").value,
-        rating: Number(document.getElementById("rating").value),
-        review: document.getElementById("review").value,
-        liked: document.getElementById("liked").checked
-      };
-
-      if (id) {
-        const index = books.findIndex(b => b.id == id);
-        books[index] = bookData;
-      } else {
-        books.push(bookData);
-      }
-      const modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
-      modal.hide();
-      renderBooks();
-    });
-
-    generateDummyBooks();
-    renderBooks();
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/books.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
